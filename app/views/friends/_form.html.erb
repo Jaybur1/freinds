@@ -1,14 +1,14 @@
 <%= form_with(model: friend) do |form| %>
   <% if friend.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation alert alert-danger alert-dismissible fade show">
       <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
-
       <ul>
         <% friend.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   <% end %>
 
   <div class="mb-3">

@@ -26,9 +26,11 @@
   <div class="mb-3">
     <%= form.text_field :phone, class: 'form-control', placeholder: 'Phone',title: 'Phone'%>
   </div>
-
+  <div class="mb-3">
+    <%= form.number_field :user_id, id: :friend_user_id, hidden: true, value: current_user.id%>
+  </div>
   <div class="actions">
-    <%= form.submit 'Update', class:'btn btn-secondary' %>
+    <%= form.submit 'Submit', class:'btn btn-secondary' %>
   </div>
   <br />
 <% end %>
